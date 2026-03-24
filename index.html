@@ -9,13 +9,10 @@
 
     :root {
       --bg: #f9f9f7;
-      --surface: #ffffff;
       --border: #e8e8e4;
       --text: #1a1a1a;
       --muted: #888880;
-      --accent: #2d6a4f;
-      --accent-light: #e8f4ef;
-      --hover-shadow: 0 4px 24px rgba(0,0,0,0.08);
+      --hover-shadow: 0 6px 28px rgba(0,0,0,0.10);
     }
 
     body {
@@ -62,41 +59,56 @@
     }
 
     .card {
-      background: var(--surface);
       border: 1px solid var(--border);
-      border-radius: 12px;
-      padding: 28px 28px 24px;
+      border-radius: 14px;
       text-decoration: none;
       color: inherit;
       transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.15s ease;
       display: flex;
       flex-direction: column;
-      gap: 8px;
+      overflow: hidden;
     }
 
     .card:hover {
       box-shadow: var(--hover-shadow);
-      border-color: #d0d0ca;
-      transform: translateY(-2px);
+      border-color: #c8c8c2;
+      transform: translateY(-3px);
+    }
+
+    .card-thumb {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+      object-position: top;
+      display: block;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-body {
+      padding: 20px 22px 18px;
+      display: flex;
+      flex-direction: column;
+      gap: 5px;
+      flex: 1;
     }
 
     .card-name {
-      font-size: 1.05rem;
+      font-size: 1rem;
       font-weight: 600;
       letter-spacing: -0.01em;
     }
 
     .card-desc {
-      font-size: 0.9rem;
+      font-size: 0.875rem;
       color: var(--muted);
       line-height: 1.5;
     }
 
     .card-url {
-      margin-top: 6px;
-      font-size: 0.8rem;
-      color: var(--accent);
+      margin-top: 4px;
+      font-size: 0.775rem;
       font-weight: 500;
+      opacity: 0.55;
     }
 
     footer {
@@ -123,40 +135,67 @@
   <main>
     <div class="grid">
 
-      <a class="card" href="https://sproutiq.netlify.app" target="_blank" rel="noopener">
-        <div class="card-name">SproutIQ</div>
-        <div class="card-desc">Your home garden AI companion</div>
-        <div class="card-url">sproutiq.netlify.app</div>
+      <a class="card" href="https://sproutiq.netlify.app" target="_blank" rel="noopener" style="background:#dff2e8;">
+        <img class="card-thumb" src="images/sproutiq.png" alt="SproutIQ preview" />
+        <div class="card-body">
+          <div class="card-name">SproutIQ</div>
+          <div class="card-desc">Your home garden AI companion</div>
+          <div class="card-url">sproutiq.netlify.app</div>
+        </div>
       </a>
 
-      <a class="card" href="https://springbreak26.netlify.app" target="_blank" rel="noopener">
-        <div class="card-name">Spring Break 26</div>
-        <div class="card-desc">Spring Break family hype site</div>
-        <div class="card-url">springbreak26.netlify.app</div>
+      <a class="card" href="https://springbreak26.netlify.app" target="_blank" rel="noopener" style="background:#fde8d6;">
+        <img class="card-thumb" src="images/springbreak26.png" alt="Spring Break 26 preview" />
+        <div class="card-body">
+          <div class="card-name">Spring Break 26</div>
+          <div class="card-desc">Spring Break family hype site</div>
+          <div class="card-url">springbreak26.netlify.app</div>
+        </div>
       </a>
 
-      <a class="card" href="https://orchardbook.netlify.app" target="_blank" rel="noopener">
-        <div class="card-name">OrchardBook</div>
-        <div class="card-desc">The home fruit-growers' essential companion</div>
-        <div class="card-url">orchardbook.netlify.app</div>
+      <a class="card" href="https://orchardbook.netlify.app" target="_blank" rel="noopener" style="background:#fef0cc;">
+        <img class="card-thumb" src="images/orchardbook.png" alt="OrchardBook preview" />
+        <div class="card-body">
+          <div class="card-name">OrchardBook</div>
+          <div class="card-desc">The home fruit-growers' essential companion</div>
+          <div class="card-url">orchardbook.netlify.app</div>
+        </div>
       </a>
 
-      <a class="card" href="https://dryers.netlify.app" target="_blank" rel="noopener">
-        <div class="card-name">DoyerFan</div>
-        <div class="card-desc">It's time for Dodger Baseball #ITFDB</div>
-        <div class="card-url">dryers.netlify.app</div>
+      <a class="card" href="https://doyers.netlify.app" target="_blank" rel="noopener" style="background:#d8e8ff;">
+        <img class="card-thumb" src="images/doyerfan.png" alt="DoyerFan preview" />
+        <div class="card-body">
+          <div class="card-name">DoyerFan</div>
+          <div class="card-desc">It's time for Dodger Baseball #ITFDB</div>
+          <div class="card-url">doyers.netlify.app</div>
+        </div>
       </a>
 
-      <a class="card" href="https://mrbanker.netlify.app" target="_blank" rel="noopener">
-        <div class="card-name">MrBanker</div>
-        <div class="card-desc">Your trusted source for honest business feedback</div>
-        <div class="card-url">mrbanker.netlify.app</div>
+      <a class="card" href="https://mrbanker.netlify.app" target="_blank" rel="noopener" style="background:#e8eaf5;">
+        <img class="card-thumb" src="images/mrbanker.png" alt="MrBanker preview" />
+        <div class="card-body">
+          <div class="card-name">MrBanker</div>
+          <div class="card-desc">Your trusted source for honest business feedback</div>
+          <div class="card-url">mrbanker.netlify.app</div>
+        </div>
       </a>
 
-      <a class="card" href="https://wbcfan.netlify.app" target="_blank" rel="noopener">
-        <div class="card-name">WBC Fan</div>
-        <div class="card-desc">The World Plays Baseball — Watch It Now</div>
-        <div class="card-url">wbcfan.netlify.app</div>
+      <a class="card" href="https://wbcfan.netlify.app" target="_blank" rel="noopener" style="background:#fde0e8;">
+        <img class="card-thumb" src="images/wbcfan.png" alt="WBC Fan preview" />
+        <div class="card-body">
+          <div class="card-name">WBC Fan</div>
+          <div class="card-desc">The World Plays Baseball — Watch It Now</div>
+          <div class="card-url">wbcfan.netlify.app</div>
+        </div>
+      </a>
+
+      <a class="card" href="https://github.com/kevinmklein" target="_blank" rel="noopener" style="background:#e8e4de;">
+        <img class="card-thumb" src="images/github.png" alt="GitHub profile preview" />
+        <div class="card-body">
+          <div class="card-name">GitHub</div>
+          <div class="card-desc">My open source work and project repositories</div>
+          <div class="card-url">github.com/kevinmklein</div>
+        </div>
       </a>
 
     </div>
